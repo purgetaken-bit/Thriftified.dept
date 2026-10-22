@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Thriftified</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announce">COLLECTION 01 DROPS OCTOBER 28</div>
+
+  <header class="head">
+    <div class="wrap bar">
+      <a class="logo" href="#top">Thriftified</a>
+      <nav id="nav">
+        <a href="#top">Home</a>
+        <a href="#teasers">Teasers</a>
+        <a href="#shop">Shop All</a>
+        <a href="#collections">Collections</a>
+      </nav>
+      <div class="icons">
+        <button id="searchBtn" class="icon" aria-label="Search">Search</button>
+        <button id="cartBtn" class="icon" aria-label="Open cart">Cart <span id="cartCount">0</span></button>
+      </div>
+    </div>
+    <div id="searchBar" class="wrap searchbar" hidden>
+      <input id="search" type="search" placeholder="Search items" aria-label="Search items">
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-carousel" aria-hidden="true">
+        <div class="hero-slide active" style="background-image:url('collection-01-tees.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('collection-01-jackets.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('collection-01-hoodies.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('collection-01-nike-sweatshirts.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('collection-01-golfwear.jpg')"></div>
+      </div>
+      <div class="hero-in">
+        <h1 id="dropName">COLLECTION 01</h1>
+        <p id="dropSub"></p>
+        <div id="countdown" class="countdown" aria-live="off"></div>
+        <div class="hero-actions"><a class="btn" href="#teasers">SEE THE TEASERS</a><button class="btn btn-outline" id="notifyOpen" type="button">NOTIFY ME ON DROP</button></div>
+        <form id="notifyForm" class="notify-form" hidden><label for="notifyEmail">Get a reminder when Collection 01 drops</label><div class="notify-row"><input id="notifyEmail" type="email" placeholder="Your email address" required><button class="btn" type="submit">Notify me</button></div><p id="notifyMessage" aria-live="polite">Demo form: connect an email service to send real reminders.</p></form>
+      </div>
+    </section>
+
+    <section id="teasers" class="wrap block">
+      <div class="block-head"><h2>Teasers</h2><a href="#shop" class="link">View all</a></div>
+      <div id="teaserGrid" class="teasers">
+        <article class="teaser">
+          <img src="collection-01-tees.jpg" alt="Collection 01 neutral and colored T-shirts">
+          <h3>Everyday Tees</h3>
+          <p>Easy staples. Carefully picked.</p>
+        </article>
+        <article class="teaser">
+          <img src="collection-01-jackets.jpg" alt="Collection 01 vintage-style sports jackets">
+          <h3>Vintage Sport Jackets</h3>
+          <p>Classic layers, one-of-a-kind finds.</p>
+        </article>
+        <article class="teaser">
+          <img src="collection-01-hoodies.jpg" alt="Collection 01 hoodies and zip-up jackets">
+          <h3>Hoodies & Zip-Ups</h3>
+          <p>Comfort with a throwback feel.</p>
+        </article>
+        <article class="teaser">
+          <img src="collection-01-nike-sweatshirts.jpg" alt="Collection 01 Nike sweatshirts">
+          <h3>Graphic Sweatshirts</h3>
+          <p>Standout pieces from the first drop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="collections" class="wrap block">
+      <div class="block-head"><h2>Collections</h2></div>
+      <div id="collGrid" class="colls"></div>
+    </section>
+
+    <section id="shop" class="wrap block">
+      <div class="block-head"><h2 id="shopTitle">Shop All</h2><button id="clearFilter" class="link" hidden>Show everything</button></div>
+      <p class="shop-note">Five sample T-shirt products for exploring the store. Product photos and prices are examples, not confirmed live inventory.</p>
+      <div id="categoryFilters" class="category-filters" aria-label="Filter garments by type"></div>
+      <p id="count" class="count" aria-live="polite"></p>
+      <div id="shopGrid" class="grid"></div>
+    </section>
+
+    <section class="story">
+      <div class="wrap">
+        <h2>Thriftified:</h2>
+        <p>Pre-loved pieces picked by hand by Justin Jade Navarrete. A virtual store shipping from Mindanao.</p>
+        <a class="btn" href="#shop">Shop now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <p>© 2026 Thriftified</p>
+      <p><a href="#">Privacy policy</a> · <a href="#">Shipping policy</a> · <a href="#">Contact information</a></p>
+      <p><a href="#" id="ig" target="_blank" rel="noopener">Instagram @thriftfied.dept</a> · <a href="#" id="fb" target="_blank" rel="noopener">Facebook Thriftified</a></p>
+    </div>
+  </footer>
+
+  <button id="chatLauncher" class="chat-launcher" type="button" aria-expanded="false" aria-controls="chatPanel">Chat with us</button>
+  <section id="chatPanel" class="chat-panel" hidden aria-label="Thriftified inquiries chat"><div class="chat-head"><strong>Thriftified inquiries</strong><button id="chatClose" type="button" aria-label="Close chat">×</button></div><div id="chatMessages" class="chat-messages" aria-live="polite"><p class="chat-bubble">Hi! Ask us about sizing, prices, shipping, or Collection 01.</p></div><form id="chatForm" class="chat-form"><label class="sr-only" for="chatInput">Your inquiry</label><input id="chatInput" type="text" placeholder="Type your question..." required><button type="submit">Send</button></form><p class="chat-contact-note">This chat is a preview and does not deliver messages to the store. Contact me on Facebook and I’ll personally reply.</p><a class="btn full chat-facebook" href="https://www.facebook.com/JustinJadePescuela.Navarrete/" target="_blank" rel="noopener">Contact Us on Facebook</a><a class="chat-messenger" href="https://www.facebook.com/JustinJadePescuela.Navarrete/" target="_blank" rel="noopener">Continue in Messenger / Facebook</a></section>
+  <div id="overlay" hidden></div>
+  <aside id="drawer" aria-label="Cart" aria-hidden="true">
+    <div class="drawer-head"><h2>Your cart</h2><button id="closeCart" class="icon" aria-label="Close cart">Close</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="drawer-foot">
+      <p class="total"><span>Total</span><strong id="cartTotal"></strong></p>
+      <a id="checkout" class="btn full" href="#" target="_blank" rel="noopener">Order via Messenger</a>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
